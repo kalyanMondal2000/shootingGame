@@ -1,0 +1,18 @@
+
+#gameSpace{
+    width:1000px;
+    height:500px;
+    background-color:lightslategrey;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#character{
+    width:150px;
+    height:150px;
+}
+#playCharacter{
+    width:150px;
+    height:150px;
+}
