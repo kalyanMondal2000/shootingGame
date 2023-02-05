@@ -1,3 +1,4 @@
+
 class menu{
     constructor(charArray, choiceArea, gameArea, newImgs, width, height, backgroundcolor){
         this.charArray = charArray;
@@ -22,15 +23,20 @@ class menu{
         this.gameArea.style.height = this.height
         this.gameArea.style.backgroundColor= this.backgroundcolor
     }
+    
     select(charArray, gameArea){
         this.newImgs.forEach(element =>{
-            element.addEventListener("click", function clique(){
+            element.onclick = function(){
                 const source = element.src
                 const newImg = document.createElement("img")
                 newImg.src = source;
                 newImg.id = "character";
                 document.getElementById("gameArea").appendChild(newImg)
-            })
+                for(let x=0; x<newImgs.length; x++){
+                    newImgs[x].onclick = function(){}
+                }
+            }
+
         })
         }
 }
