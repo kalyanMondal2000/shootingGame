@@ -24,7 +24,7 @@ class menu{
     }
     select(charArray, gameArea){
         this.newImgs.forEach(element =>{
-            element.addEventListener("click", function(){
+            element.addEventListener("click", function clique(){
                 const source = element.src
                 const newImg = document.createElement("img")
                 newImg.src = source;
@@ -32,7 +32,7 @@ class menu{
                 document.getElementById("gameArea").appendChild(newImg)
             })
         })
-    }
+        }
 }
 charArray = ["char1.png", "char5.png", "char6.png"];
 choiceArea = document.getElementById("choiceArea");
